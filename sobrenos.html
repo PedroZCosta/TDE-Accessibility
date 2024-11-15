@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós - Acessibilidade na Vida Cotidiana</title>
+    <!-- Fontes mais sóbrias para dar um tom mais sério -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+
+  <body class="body bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-white">
+    <!-- Navegação Fixa no Topo -->
+    <nav class="flex justify-between items-center bg-gray-800 p-6 fixed top-0 left-0 w-full z-10 dark:bg-gray-700">
+        <div class="flex items-center">
+            <a href="#" class="text-white text-2xl font-bold">Acessibilidade na Vida Cotidiana</a>
+        </div>
+        <ul class="flex space-x-8 text-xl">
+            <li><a href="/index.html" class="text-white hover:text-gray-400">Home</a></li>
+            <li><a href="/sobrenos.html" class="text-white hover:text-gray-400">Sobre Nós</a></li>
+            <li><a href="contato.html" class="text-white hover:text-gray-400">Contato</a></li>
+            <li><a href="recursos.html" class="text-white hover:text-gray-400">Recursos</a></li>
+            <li><a href="blog.html" class="text-white hover:text-gray-400">Blog</a></li>
+        </ul>
+        <div class="flex items-center">
+            <img id="dark-mode-toggle" class="moon cursor-pointer drop-shadow-lg invert invertColor" src="./images/lua.png" alt="Modo Escuro" width="35px">
+            <img id="light-mode-toggle" class="sun cursor-pointer hidden invert invertColor" src="./images/sol.png" alt="Modo Claro" width="35px">
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="pt-24 min-h-screen px-6 pb-8">
+      <div class="max-w-5xl mx-auto border-l-8 border-r-8 border-gray-300 dark:border-gray-700 p-8">
+          <section class="mb-12">
+              <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Sobre Nós</h1>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                  Somos uma organização dedicada a promover a acessibilidade em diferentes áreas da vida cotidiana. Nosso objetivo é garantir que todas as pessoas, independentemente de suas habilidades físicas, cognitivas ou sensoriais, tenham acesso igualitário à informação e aos serviços disponíveis no mundo digital e físico.
+              </p>
+          </section>
+
+          <section class="mb-12">
+              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Nossa Missão</h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                  Nossa missão é sensibilizar e educar a sociedade sobre a importância da acessibilidade, além de promover soluções práticas que permitam a inclusão de pessoas com deficiência em todos os aspectos da vida social, econômica e cultural.
+              </p>
+          </section>
+
+          <section class="mb-12">
+              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Visão</h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                  Ser reconhecido como um líder na promoção da acessibilidade, colaborando com diversas instituições e iniciativas para transformar espaços digitais e físicos em ambientes mais inclusivos e acessíveis para todos.
+              </p>
+          </section>
+
+          <section class="mb-12">
+            <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Nossos Valores</h2>
+            <ul class="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300">
+                <li>Inclusão</li>
+                <li>Respeito à diversidade</li>
+                <li>Inovação</li>
+                <li>Acessibilidade para todos</li>
+                <li>Empatia</li>
+            </ul>
+        </section>
+
+          <section class="flex flex-col md:flex-row gap-8 mb-12">
+              <div class="w-full md:w-1/2">
+                  <img src="./images/nossa-equipe.jpg" alt="Nossa Equipe" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+              </div>
+              <div class="w-full md:w-1/2">
+                  <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Nossa Equipe</h2>
+                  <p class="text-lg text-gray-700 dark:text-gray-300">
+                      Nossa equipe é formada por profissionais apaixonados pela causa da acessibilidade e inclusão. Trabalhamos de forma colaborativa para desenvolver soluções inovadoras e práticas que impactam positivamente a vida de muitas pessoas.
+                  </p>
+              </div>
+          </section>
+
+          <section class="mb-12">
+              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Como Ajudamos</h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300">
+                  Oferecemos consultoria, treinamento e desenvolvimento de soluções em acessibilidade digital e física. Nossos serviços são personalizados para atender às necessidades de empresas, escolas, governos e indivíduos que desejam tornar seus ambientes mais inclusivos.
+              </p>
+          </section>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-6 text-center dark:bg-gray-700">
+      <p>&copy; 2024 Acessibilidade na Vida Cotidiana</p>
+    </footer>
+  </body>
+
+  <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+  
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</html>
