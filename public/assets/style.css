@@ -1,0 +1,14 @@
+/* src/assets/style.css */
+
+/* Importando as diretivas do Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.invertColor {
+  @apply dark:invert dark:hover:invert-50 hover:invert-50 duration-200;
+}
+
+.body{
+  @apply dark:bg-[#0A0F1E] transition-all duration-300;
+}

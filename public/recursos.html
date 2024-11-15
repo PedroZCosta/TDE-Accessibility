@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-br" class="">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos - Acessibilidade na Vida Cotidiana</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <!-- Fontes mais sóbrias para dar um tom mais sério -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="body bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-white">
+    <!-- Navegação Fixa no Topo -->
+    <nav class="flex justify-between items-center bg-gray-800 p-6 fixed top-0 left-0 w-full z-10 dark:bg-gray-700">
+        <div class="flex items-center">
+            <a href="#" class="text-white text-2xl font-bold">Acessibilidade na Vida Cotidiana</a>
+        </div>
+        <ul class="flex space-x-8 text-xl">
+            <li><a href="index.html" class="text-white hover:text-gray-400">Home</a></li>
+            <li><a href="sobrenos.html" class="text-white hover:text-gray-400">Sobre Nós</a></li>
+            <li><a href="contato.html" class="text-white hover:text-gray-400">Contato</a></li>
+            <li><a href="recursos.html" class="text-white hover:text-gray-400">Recursos</a></li>
+            <li><a href="blog.html" class="text-white hover:text-gray-400">Blog</a></li>
+        </ul>
+        <div class="flex items-center">
+            <img id="dark-mode-toggle" class="moon cursor-pointer drop-shadow-lg invert invertColor" src="./images/lua.png" alt="Modo Escuro" width="35px">
+            <img id="light-mode-toggle" class="sun cursor-pointer hidden invert invertColor" src="./images/sol.png" alt="Modo Claro" width="35px">
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="pt-24 min-h-screen px-6 pb-8">
+        <div class="max-w-5xl mx-auto border-l-8 border-r-8 border-gray-300 dark:border-gray-700 p-8">
+            <section class="mb-12">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Recursos de Acessibilidade Digital</h1>
+                <p class="text-lg text-gray-700 dark:text-gray-300">
+                    Nesta seção, você encontrará uma seleção de recursos úteis para melhorar a acessibilidade digital. Essas ferramentas e tecnologias são fundamentais para garantir que todos possam acessar, entender e interagir com conteúdos digitais de forma igualitária.
+                </p>
+            </section>
+
+            <!-- Ferramentas de Acessibilidade -->
+            <section class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="w-full md:w-1/2">
+                    <img src="./images/ferramentas-acessibilidade.jpg" alt="Ferramentas de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Ferramentas de Teste de Acessibilidade</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                        Ferramentas como o **Lighthouse**, **Axe** e **WAVE** são essenciais para ajudar desenvolvedores e designers a detectar problemas de acessibilidade em sites e aplicativos. Elas permitem auditorias rápidas para garantir que seu conteúdo seja acessível a todos.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Guias e Tutoriais -->
+            <section class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="w-full md:w-1/2">
+                    <img src="./images/guias-acessibilidade.jpg" alt="Guias de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Guias e Tutoriais para Desenvolvedores</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                        Existem diversos guias online que oferecem recomendações detalhadas para o desenvolvimento de websites acessíveis. O **WCAG** (Web Content Accessibility Guidelines) e os tutoriais do **MDN Web Docs** são ótimos pontos de partida para quem deseja aprender mais sobre boas práticas de acessibilidade.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Tecnologias Assistivas -->
+            <section class="flex flex-col md:flex-row gap-8 mb-12">
+                <div class="w-full md:w-1/2">
+                    <img src="./images/tecnologias-assistivas.jpg" alt="Tecnologias assistivas" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Tecnologias Assistivas para Inclusão Digital</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                        As tecnologias assistivas são fundamentais para garantir a inclusão digital. Ferramentas como leitores de tela, software de ampliação de texto e dispositivos de controle por voz ajudam pessoas com deficiência a navegar na web e utilizar dispositivos móveis de maneira autônoma.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Links Úteis -->
+            <section class="mb-12">
+                <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Links Úteis</h2>
+                <ul class="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300">
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" class="text-blue-600 hover:text-blue-400">WCAG Quick Reference</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" class="text-blue-600 hover:text-blue-400">MDN Web Docs - Acessibilidade</a></li>
+                    <li><a href="https://www.accessibility.org/" target="_blank" class="text-blue-600 hover:text-blue-400">Acessibility.org</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-6 text-center dark:bg-gray-700">
+        <p>&copy; 2024 Acessibilidade na Vida Cotidiana</p>
+    </footer>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+<script type="module" src="/assets/app.js"></script>
+</body>
+
+</html>
