@@ -4,6 +4,10 @@ import './style.css';  // Caminho correto para o arquivo de estilo
 const sunIcon = document.querySelector(".sun");
 const moonIcon = document.querySelector(".moon");
 
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const sidebar = document.getElementById('sidebar');
+const menu = document.getElementById('menu');
+
 // Variáveis dos temas
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -45,6 +49,11 @@ sunIcon.addEventListener("click", () => {
 });
 moonIcon.addEventListener("click", () => {
     themeSwitch();
+});
+
+hamburgerBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('hidden');  // Alterna a visibilidade da barra lateral
+    menu.classList.toggle('hidden');     // Alterna a visibilidade do menu horizontal
 });
 
 // Invocar o check de tema no carregamento inicial

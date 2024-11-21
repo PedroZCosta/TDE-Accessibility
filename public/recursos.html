@@ -12,33 +12,61 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 
 <body class="body bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-white">
     <!-- Navegação Fixa no Topo -->
     <nav class="flex justify-between items-center bg-gray-800 p-6 fixed top-0 left-0 w-full z-10 dark:bg-gray-700">
-        <div class="flex items-center">
-            <a href="#" class="text-white text-2xl font-bold">Acessibilidade na Vida Cotidiana</a>
+        <!-- Logo / Título -->
+        <div class="md:flex items-center hidden">
+            <a href="#" class="text-white text-2xl font-bold" tabindex="1">Acessibilidade na Vida Cotidiana</a>
         </div>
-        <ul class="flex space-x-8 text-xl">
-            <li><a href="index.html" class="text-white hover:text-gray-400">Home</a></li>
-            <li><a href="sobrenos.html" class="text-white hover:text-gray-400">Sobre Nós</a></li>
-            <li><a href="contato.html" class="text-white hover:text-gray-400">Contato</a></li>
-            <li><a href="recursos.html" class="text-white hover:text-gray-400">Recursos</a></li>
-            <li><a href="blog.html" class="text-white hover:text-gray-400">Blog</a></li>
+    
+        <!-- Botão de Menu Hamburguer para telas pequenas -->
+        <div class="md:hidden flex items-center">
+            <button id="hamburger-btn" class="text-white text-2xl" tabindex="9">
+                <i class="fa fa-bars"></i> <!-- Ícone de hamburguer (fa fa-bars) -->
+            </button>
+        </div>
+    
+        <!-- Menu de navegação -->
+        <ul id="menu" class="flex space-x-8 text-sm md:text-xl hidden md:flex">
+            <li><a href="index.html" class="text-white hover:text-gray-400" tabindex="2">Home</a></li>
+            <li><a href="sobrenos.html" class="text-white hover:text-gray-400" tabindex="3">Sobre Nós</a></li>
+            <li><a href="contato.html" class="text-white hover:text-gray-400" tabindex="4">Contato</a></li>
+            <li><a href="recursos.html" class="text-white hover:text-gray-400" tabindex="5">Recursos</a></li>
+            <li><a href="blog.html" class="text-white hover:text-gray-400" tabindex="6">Blog</a></li>
         </ul>
+    
+        <!-- Ícones de Modo Escuro / Claro -->
         <div class="flex items-center">
-            <img id="dark-mode-toggle" class="moon cursor-pointer drop-shadow-lg invert invertColor" src="./images/lua.png" alt="Modo Escuro" width="35px">
-            <img id="light-mode-toggle" class="sun cursor-pointer hidden invert invertColor" src="./images/sol.png" alt="Modo Claro" width="35px">
+            <img id="dark-mode-toggle" class="moon cursor-pointer drop-shadow-lg invert invertColor" src="./images/lua.png" alt="Modo Escuro" width="35px" tabindex="7">
+            <img id="light-mode-toggle" class="sun cursor-pointer hidden invert invertColor" src="./images/sol.png" alt="Modo Claro" width="35px" tabindex="8">
         </div>
     </nav>
 
+        <!-- Barra Lateral (aparecerá em telas menores) -->
+        <div id="sidebar" class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-20 hidden flex items-center justify-center">
+            <div class="bg-gray-900 text-white p-6 w-64 h-full">
+                <ul class="space-y-6 text-xl">
+                    <li><a href="index.html" class="hover:text-gray-400" tabindex="2">Home</a></li>
+                    <li><a href="sobrenos.html" class="hover:text-gray-400" tabindex="3">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="hover:text-gray-400" tabindex="4">Contato</a></li>
+                    <li><a href="recursos.html" class="hover:text-gray-400" tabindex="5">Recursos</a></li>
+                    <li><a href="blog.html" class="hover:text-gray-400" tabindex="6">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        
     <!-- Conteúdo Principal -->
     <main class="pt-24 min-h-screen px-6 pb-8">
         <div class="max-w-5xl mx-auto border-l-8 border-r-8 border-gray-300 dark:border-gray-700 p-8">
             <section class="mb-12">
-                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Recursos de Acessibilidade Digital</h1>
-                <p class="text-lg text-gray-700 dark:text-gray-300">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4" tabindex="9">Recursos de Acessibilidade Digital</h1>
+                <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="10">
                     Nesta seção, você encontrará uma seleção de recursos úteis para melhorar a acessibilidade digital. Essas ferramentas e tecnologias são fundamentais para garantir que todos possam acessar, entender e interagir com conteúdos digitais de forma igualitária.
                 </p>
             </section>
@@ -46,11 +74,14 @@
             <!-- Ferramentas de Acessibilidade -->
             <section class="flex flex-col md:flex-row gap-8 mb-12">
                 <div class="w-full md:w-1/2">
-                    <img src="./images/ferramentas-acessibilidade.jpg" alt="Ferramentas de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                    <figure tabindex="11">
+                        <img src="./images/ferramentas-acessibilidade.jpg" alt="Ferramentas de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                        <figcaption class="text-center text-gray-400 mt-2">Ilustração de personagens utilizando ferramentas de acessibilidade em websites, representando inclusão digital.</figcaption>
+                    </figure>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Ferramentas de Teste de Acessibilidade</h2>
-                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="12">Ferramentas de Teste de Acessibilidade</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="13">
                         Ferramentas como o **Lighthouse**, **Axe** e **WAVE** são essenciais para ajudar desenvolvedores e designers a detectar problemas de acessibilidade em sites e aplicativos. Elas permitem auditorias rápidas para garantir que seu conteúdo seja acessível a todos.
                     </p>
                 </div>
@@ -59,11 +90,14 @@
             <!-- Guias e Tutoriais -->
             <section class="flex flex-col md:flex-row gap-8 mb-12">
                 <div class="w-full md:w-1/2">
-                    <img src="./images/guias-acessibilidade.jpg" alt="Guias de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                    <figure tabindex="14">
+                        <img src="./images/guias-acessibilidade.jpg" alt="Guias de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                        <figcaption class="text-center text-gray-400 mt-2">Ilustração das Diretrizes de Acessibilidade para Conteúdo Web (WCAG) conectadas a exemplos práticos de acessibilidade.</figcaption>
+                    </figure>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Guias e Tutoriais para Desenvolvedores</h2>
-                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="15">Guias e Tutoriais para Desenvolvedores</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="16">
                         Existem diversos guias online que oferecem recomendações detalhadas para o desenvolvimento de websites acessíveis. O **WCAG** (Web Content Accessibility Guidelines) e os tutoriais do **MDN Web Docs** são ótimos pontos de partida para quem deseja aprender mais sobre boas práticas de acessibilidade.
                     </p>
                 </div>
@@ -72,11 +106,14 @@
             <!-- Tecnologias Assistivas -->
             <section class="flex flex-col md:flex-row gap-8 mb-12">
                 <div class="w-full md:w-1/2">
-                    <img src="./images/tecnologias-assistivas.jpg" alt="Tecnologias assistivas" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                    <figure tabindex="17">
+                        <img src="./images/tecnologias-assistivas.jpg" alt="Tecnologias assistivas" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                        <figcaption class="text-center text-gray-400 mt-2">Imagem de um teclado acessível com suporte a Libras, sendo utilizado por uma mulher.</figcaption>
+                    </figure>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Tecnologias Assistivas para Inclusão Digital</h2>
-                    <p class="text-lg text-gray-700 dark:text-gray-300">
+                    <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="18">Tecnologias Assistivas para Inclusão Digital</h2>
+                    <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="19">
                         As tecnologias assistivas são fundamentais para garantir a inclusão digital. Ferramentas como leitores de tela, software de ampliação de texto e dispositivos de controle por voz ajudam pessoas com deficiência a navegar na web e utilizar dispositivos móveis de maneira autônoma.
                     </p>
                 </div>
@@ -84,11 +121,11 @@
 
             <!-- Links Úteis -->
             <section class="mb-12">
-                <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Links Úteis</h2>
+                <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="20">Links Úteis</h2>
                 <ul class="list-disc pl-6 text-lg text-gray-700 dark:text-gray-300">
-                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" class="text-blue-600 hover:text-blue-400">WCAG Quick Reference</a></li>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" class="text-blue-600 hover:text-blue-400">MDN Web Docs - Acessibilidade</a></li>
-                    <li><a href="https://www.accessibility.org/" target="_blank" class="text-blue-600 hover:text-blue-400">Acessibility.org</a></li>
+                    <li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" class="text-blue-600 hover:text-blue-400" tabindex="21">WCAG Quick Reference</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" class="text-blue-600 hover:text-blue-400" tabindex="22">MDN Web Docs - Acessibilidade</a></li>
+                    <li><a href="https://www.accessibility.org/" target="_blank" class="text-blue-600 hover:text-blue-400" tabindex="23">Acessibility.org</a></li>
                 </ul>
             </section>
         </div>

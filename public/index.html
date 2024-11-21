@@ -11,63 +11,96 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   </head>
 
   <body class="body bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-white">
     <!-- Navegação Fixa no Topo -->
     <nav class="flex justify-between items-center bg-gray-800 p-6 fixed top-0 left-0 w-full z-10 dark:bg-gray-700">
-        <div class="flex items-center">
-            <a href="#" class="text-white text-2xl font-bold">Acessibilidade na Vida Cotidiana</a>
+        <!-- Logo / Título -->
+        <div class="md:flex items-center hidden">
+            <a href="#" class="text-white text-2xl font-bold" tabindex="1">Acessibilidade na Vida Cotidiana</a>
         </div>
-        <ul class="flex space-x-8 text-xl">
-            <li><a href="index.html" class="text-white hover:text-gray-400">Home</a></li>
-            <li><a href="sobrenos.html" class="text-white hover:text-gray-400">Sobre Nós</a></li>
-            <li><a href="contato.html" class="text-white hover:text-gray-400">Contato</a></li>
-            <li><a href="recursos.html" class="text-white hover:text-gray-400">Recursos</a></li>
-            <li><a href="blog.html" class="text-white hover:text-gray-400">Blog</a></li>
+    
+        <!-- Botão de Menu Hamburguer para telas pequenas -->
+        <div class="md:hidden flex items-center">
+            <button id="hamburger-btn" class="text-white text-2xl" tabindex="9">
+                <i class="fa fa-bars"></i> <!-- Ícone de hamburguer (fa fa-bars) -->
+            </button>
+        </div>
+    
+        <!-- Menu de navegação -->
+        <ul id="menu" class="flex space-x-8 text-sm md:text-xl hidden md:flex">
+            <li><a href="index.html" class="text-white hover:text-gray-400" tabindex="2">Home</a></li>
+            <li><a href="sobrenos.html" class="text-white hover:text-gray-400" tabindex="3">Sobre Nós</a></li>
+            <li><a href="contato.html" class="text-white hover:text-gray-400" tabindex="4">Contato</a></li>
+            <li><a href="recursos.html" class="text-white hover:text-gray-400" tabindex="5">Recursos</a></li>
+            <li><a href="blog.html" class="text-white hover:text-gray-400" tabindex="6">Blog</a></li>
         </ul>
+    
+        <!-- Ícones de Modo Escuro / Claro -->
         <div class="flex items-center">
-            <img id="dark-mode-toggle" class="moon cursor-pointer drop-shadow-lg invert invertColor" src="./images/lua.png" alt="Modo Escuro" width="35px">
-            <img id="light-mode-toggle" class="sun cursor-pointer hidden invert invertColor" src="./images/sol.png" alt="Modo Claro" width="35px">
+            <img id="dark-mode-toggle" class="moon cursor-pointer drop-shadow-lg invert invertColor" src="./images/lua.png" alt="Modo Escuro" width="35px" tabindex="7">
+            <img id="light-mode-toggle" class="sun cursor-pointer hidden invert invertColor" src="./images/sol.png" alt="Modo Claro" width="35px" tabindex="8">
         </div>
     </nav>
+    
+    <!-- Barra Lateral (aparecerá em telas menores) -->
+    <div id="sidebar" class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-20 hidden flex items-center justify-center">
+        <div class="bg-gray-900 text-white p-6 w-64 h-full">
+            <ul class="space-y-6 text-xl">
+                <li><a href="index.html" class="hover:text-gray-400" tabindex="2">Home</a></li>
+                <li><a href="sobrenos.html" class="hover:text-gray-400" tabindex="3">Sobre Nós</a></li>
+                <li><a href="contato.html" class="hover:text-gray-400" tabindex="4">Contato</a></li>
+                <li><a href="recursos.html" class="hover:text-gray-400" tabindex="5">Recursos</a></li>
+                <li><a href="blog.html" class="hover:text-gray-400" tabindex="6">Blog</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Conteúdo Principal -->
-    <main class="pt-24 min-h-screen px-6 pb-8">
+    <main class="pt-24 min-h-screen px-6 pb-8"> 
       <div class="max-w-5xl mx-auto border-l-8 border-r-8 border-gray-300 dark:border-gray-700 p-8">
           <section class="mb-12">
-              <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Importância da Acessibilidade Digital</h1>
-              <p class="text-lg text-gray-700 dark:text-gray-300">
+              <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4" tabindex="9">Importância da Acessibilidade Digital</h1>
+              <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="10">
                   Acessibilidade digital é essencial para garantir que todas as pessoas, independentemente de suas habilidades físicas ou cognitivas, possam acessar e navegar por conteúdos e serviços online. Isso inclui tornar sites mais legíveis para pessoas com deficiências visuais e garantir navegação para pessoas com mobilidade reduzida.
               </p>
           </section>
   
           <section class="flex flex-col md:flex-row gap-8 mb-12">
             <div class="w-full md:w-1/2">
-                <img src="./images/acessibilidade-digital.jpg" alt="Acessibilidade digital" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                <figure tabindex="11">
+                    <img src="./images/acessibilidade-digital.jpg" alt="Acessibilidade digital" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                    <figcaption class="text-center text-gray-400 mt-2">Ilustração de pessoas representando a diversidade e inclusão na internet.</figcaption>                </figure>
             </div>
             <div class="w-full md:w-1/2">
-                <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Melhorando a Acessibilidade nos Espaços Públicos</h2>
-                <p class="text-lg text-gray-700 dark:text-gray-300">
+                <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="12">Melhorando a Acessibilidade nos Espaços Públicos</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="13">
                     Em espaços públicos, a acessibilidade envolve adaptações como rampas, elevadores e sinalização em braille. Isso garante que pessoas com deficiências possam se deslocar com segurança e de forma independente.
                 </p>
             </div>
         </section>
   
           <section class="mb-12">
-              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Tecnologias Assistivas: Facilitando o Acesso</h2>
-              <p class="text-lg text-gray-700 dark:text-gray-300">
+              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="14">Tecnologias Assistivas: Facilitando o Acesso</h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="15">
                   Tecnologias assistivas são ferramentas e dispositivos projetados para ajudar pessoas com deficiências a interagir com o mundo ao seu redor. Exemplos incluem softwares de leitura de tela para pessoas com deficiências visuais, dispositivos de controle por voz e teclados adaptados para quem tem mobilidade reduzida.
               </p>
           </section>
   
           <section class="flex flex-col md:flex-row gap-8 mb-12">
               <div class="w-full md:w-1/2">
-                  <img src="./images/Acessibilidade na Educação.jpg" alt="Acessibilidade na educação" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                    <figure tabindex="16">
+                        <img src="./images/Acessibilidade na Educação.jpg" alt="Acessibilidade na educação" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                        <figcaption class="text-center text-gray-400 mt-2">Criança utilizando um tablet para acessar a internet.</figcaption>                    
+                    </figure>
               </div>
               <div class="w-full md:w-1/2">
-                  <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Acessibilidade na Educação</h2>
-                  <p class="text-lg text-gray-700 dark:text-gray-300">
+                  <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="17">Acessibilidade na Educação</h2>
+                  <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="18">
                       A acessibilidade na educação envolve adaptar materiais, métodos de ensino e ambientes para garantir que todos os estudantes tenham as mesmas oportunidades de aprendizado. Isso pode incluir desde o uso de legendas em vídeos até a adaptação de provas e atividades para estudantes com deficiências cognitivas.
                   </p>
               </div>
@@ -75,8 +108,8 @@
   
           <!-- Seção adicional sobre Acessibilidade no Design de Websites -->
           <section class="mb-12">
-              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Acessibilidade no Design de Websites</h2>
-              <p class="text-lg text-gray-700 dark:text-gray-300">
+              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="19">Acessibilidade no Design de Websites</h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="20">
                   O design de websites acessíveis é fundamental para garantir que pessoas com diferentes tipos de deficiência possam navegar com facilidade. Isso inclui o uso de contrastes adequados entre texto e fundo, navegação por teclado e o fornecimento de alternativas textuais para elementos visuais, como imagens e vídeos.
               </p>
           </section>
@@ -84,11 +117,14 @@
           <!-- Seção adicional sobre Acessibilidade em Dispositivos Móveis -->
           <section class="flex flex-col md:flex-row gap-8 mb-12">
               <div class="w-full md:w-1/2">
-                  <img src="./images/Acessibilidade-em-dispositivos-moveis.png" alt="Acessibilidade em dispositivos móveis" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                <figure tabindex="21">
+                    <img src="./images/Acessibilidade-em-dispositivos-moveis.png" alt="Acessibilidade em dispositivos móveis" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                    <figcaption class="text-center text-gray-400 mt-2">Mulher utilizando um celular.</figcaption>
+                </figure>
               </div>
               <div class="w-full md:w-1/2">
-                  <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Acessibilidade em Dispositivos Móveis</h2>
-                  <p class="text-lg text-gray-700 dark:text-gray-300">
+                  <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="22">Acessibilidade em Dispositivos Móveis</h2>
+                  <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="23">
                       Acessibilidade em dispositivos móveis envolve garantir que aplicativos e websites sejam acessíveis em smartphones e tablets. Isso pode ser alcançado com funcionalidades como zoom, texto legível, uso de voz e atalhos de teclado adaptados para melhorar a navegação de usuários com deficiência.
                   </p>
               </div>
@@ -96,16 +132,16 @@
   
           <!-- Seção adicional sobre Benefícios da Acessibilidade para Todos -->
           <section class="mb-12">
-              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Benefícios da Acessibilidade para Todos</h2>
-              <p class="text-lg text-gray-700 dark:text-gray-300">
+              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="24">Benefícios da Acessibilidade para Todos</h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="25">
                   Acessibilidade não beneficia apenas as pessoas com deficiência, mas também melhora a experiência de todos os usuários. Websites e aplicativos acessíveis são mais fáceis de navegar, possuem melhor desempenho em SEO e alcançam um público maior. Além disso, torna-se um padrão de responsabilidade social das empresas.
               </p>
           </section>
 
           <!-- Seção adicional sobre Acessibilidade na Experiência do Usuário (UX) -->
           <section class="mb-12">
-            <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Acessibilidade na Experiência do Usuário (UX)</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300">
+            <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="26">Acessibilidade na Experiência do Usuário (UX)</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="27">
                 A experiência do usuário acessível é projetada para ser intuitiva para todos, considerando desde a disposição dos elementos na tela até a navegação e os tempos de carregamento. Isso ajuda a tornar as interfaces mais inclusivas, com design pensado para que qualquer pessoa, independentemente de habilidades ou dispositivos, consiga navegar e interagir sem barreiras.
             </p>
         </section>
@@ -113,11 +149,14 @@
         <!-- Seção adicional sobre Ferramentas para Teste de Acessibilidade -->
         <section class="flex flex-col md:flex-row gap-8 mb-12">
           <div class="w-full md:w-1/2">
-              <img src="./images/teste-acessibilidade.png" alt="Ferramentas de teste de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+            <figure tabindex="28">
+                <img src="./images/teste-acessibilidade.png" alt="Ferramentas de teste de acessibilidade" class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"/>
+                <figcaption class="text-center text-gray-400 mt-2">Imagem ilustrativa representando a acessibilidade em um teclado.</figcaption>
+            </figure>
           </div>
           <div class="w-full md:w-1/2">
-              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Ferramentas para Teste de Acessibilidade</h2>
-              <p class="text-lg text-gray-700 dark:text-gray-300">
+              <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="29">Ferramentas para Teste de Acessibilidade</h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="30">
                   Existem diversas ferramentas para ajudar desenvolvedores e designers a identificar problemas de acessibilidade em suas interfaces. Ferramentas como Lighthouse, Axe e WAVE realizam auditorias de acessibilidade, detectando questões como baixo contraste, falta de descrições em imagens e problemas de navegação por teclado.
               </p>
           </div>
@@ -125,8 +164,8 @@
 
       <!-- Seção adicional sobre Inclusão e Diversidade no Desenvolvimento Digital -->
       <section class="mb-12">
-        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4">Inclusão e Diversidade no Desenvolvimento Digital</h2>
-        <p class="text-lg text-gray-700 dark:text-gray-300">
+        <h2 class="text-3xl font-semibold text-gray-900 dark:text-white mb-4" tabindex="31">Inclusão e Diversidade no Desenvolvimento Digital</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300" tabindex="32">
             Acessibilidade está fortemente ligada à diversidade e inclusão. Equipes diversificadas trazem perspectivas únicas que ajudam a identificar e solucionar problemas de acessibilidade de maneira mais eficaz. Quando consideramos a inclusão no desenvolvimento de sites e aplicativos, criamos produtos que acolhem a diversidade de usuários e que se ajustam a um mundo digital cada vez mais conectado.
         </p>
     </section>
@@ -138,7 +177,7 @@
 
     <!-- Rodapé -->
     <footer class="bg-gray-800 text-white py-6 text-center dark:bg-gray-700">
-      <p>&copy; 2024 Acessibilidade na Vida Cotidiana</p>
+      <p tabindex="33">&copy; 2024 Acessibilidade na Vida Cotidiana</p>
   </footer>
 
 </body>
@@ -159,9 +198,6 @@
   new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
 <script type="module" src="/assets/app.js"></script>
-
-
-
 
 <!-- A partir daqui tem apenas os outros codigos html das outras pagina para realizar corretamente a build do tailwind para todas as telas -->
 <div class="hidden"> 
